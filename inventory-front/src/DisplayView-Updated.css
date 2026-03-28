@@ -1,0 +1,634 @@
+/* ==================== MODERN PREMIUM CSS - ALL PAGES ==================== */
+
+:root {
+  --primary-color: #1B98E0;
+  --primary-dark: #0d47a1;
+  --primary-light: #2dafed;
+  --text-dark: #1e293b;
+  --text-light: #ffffff;
+  --border-color: rgba(27, 152, 224, 0.2);
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 0 60px rgba(27, 152, 224, 0.08);
+}
+
+/* ================= ADMIN PAGE - VERTICAL SIDEBAR NAVBAR ================= */
+
+.admin-background {
+  min-height: 100vh;
+  font-family: "Poppins", "Inter", -apple-system, system-ui, sans-serif;
+  background: linear-gradient(180deg, 
+    #050d2c 0%, #0d47a1 8%, #1565c0 16%, #1976d2 28%, #1e88e5 42%,
+    #42a5f5 62%, #64b5f6 80%, #e1f5fe 100%);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* LEFT SIDEBAR NAVBAR */
+.admin-navbar {
+  background: linear-gradient(180deg, rgba(13, 71, 161, 0.98) 0%, rgba(21, 101, 192, 0.95) 50%, rgba(27, 152, 224, 0.92) 100%) !important;
+  backdrop-filter: blur(24px);
+  padding: 24px 16px !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4),
+              0 0 2px rgba(66, 165, 245, 0.8) inset,
+              inset -1px 0 0 rgba(255, 255, 255, 0.15);
+  border-right: 1.5px solid rgba(66, 165, 245, 0.4);
+  width: 280px;
+  min-width: 280px;
+  display: flex !important;
+  flex-direction: column;
+  flex-shrink: 0;
+  min-height: 100vh;
+}
+
+.admin-navbar .navbar-collapse {
+  display: flex !important;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+.admin-navbar .navbar-nav,
+.admin-navbar .me-auto {
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.admin-navbar .nav-item {
+  width: 100%;
+}
+
+.admin-navbar .nav-link,
+.admin-navbar .nav-link.dropdown-toggle {
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 12px 16px !important;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: 13px;
+  margin: 0 !important;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+}
+
+.admin-navbar .nav-link:hover,
+.admin-navbar .nav-link.dropdown-toggle:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(66, 165, 245, 0.3) 0%, rgba(100, 181, 246, 0.25) 100%);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.admin-navbar .dropdown-menu {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(25, 54, 99, 0.92) 100%) !important;
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(66, 165, 245, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 8px 0 !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  min-width: 220px;
+  position: absolute !important;
+  left: 100% !important;
+  margin-left: 8px !important;
+  margin-top: -8px !important;
+  animation: slideRight 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.admin-navbar .dropdown-item {
+  color: #ffffff !important;
+  padding: 11px 18px !important;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Poppins", "Inter", sans-serif;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none !important;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+  margin: 0 !important;
+}
+
+.admin-navbar .dropdown-item:hover {
+  background: linear-gradient(135deg, rgba(66, 165, 245, 0.4) 0%, rgba(100, 181, 246, 0.35) 100%) !important;
+  color: #ffffff !important;
+  padding-left: 24px !important;
+  border-left: 2.5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+  font-weight: 700;
+  color: #ef4444 !important;
+  padding: 12px 16px !important;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: rgba(239, 68, 68, 0.1);
+  margin-top: auto;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateX(4px);
+}
+
+/* ADMIN HEADER */
+.admin-header {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(242, 249, 255, 0.92) 100%) !important;
+  backdrop-filter: blur(18px);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 28px;
+  box-shadow: 0 8px 32px rgba(13, 71, 161, 0.18), 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border-bottom: 1.5px solid rgba(27, 152, 224, 0.18);
+  flex-shrink: 0;
+}
+
+.admin-header h2,
+.admin-title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--primary-dark);
+  letter-spacing: -0.6px;
+  font-family: "Poppins", "Inter", sans-serif;
+  line-height: 1.25;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-header h4,
+.admin-subtitle,
+.admin-header p {
+  opacity: 0.75;
+  font-weight: 400;
+  font-size: 16px;
+  color: #475569;
+  margin: 0;
+  letter-spacing: 0.2px;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+/* ADMIN DASHBOARD WRAPPER */
+.admin-dashboard-wrapper {
+  flex: 1;
+  padding: 40px 32px;
+  overflow-y: auto;
+}
+
+/* ================= FORM PAGES - ALL STYLES ================= */
+
+.sku-background,
+.product-background,
+.report-background {
+  min-height: 100vh;
+  background: linear-gradient(180deg, 
+    #050d2c 0%, #0d47a1 8%, #1565c0 16%, #1976d2 28%, #1e88e5 42%,
+    #42a5f5 62%, #64b5f6 80%, #e1f5fe 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-attachment: fixed;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.sku-card,
+.product-card,
+.report-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 248, 253, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  padding: 48px 42px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  border: 1.5px solid rgba(27, 152, 224, 0.18);
+  color: var(--text-dark);
+  box-shadow: var(--shadow), 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.sku-card:hover,
+.product-card:hover,
+.report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 64px rgba(13, 71, 161, 0.22), 0 0 64px rgba(27, 152, 224, 0.12), 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-dark);
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin-bottom: 16px;
+  box-shadow: inset 0 1px 2px rgba(27, 152, 224, 0.05), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.form-control:hover {
+  border-color: rgba(27, 152, 224, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 1px 2px rgba(27, 152, 224, 0.08), 0 4px 12px rgba(27, 152, 224, 0.08);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 4px rgba(27, 152, 224, 0.12), 0 8px 24px rgba(27, 152, 224, 0.15);
+  transform: translateY(-2px);
+}
+
+.form-control::placeholder {
+  color: rgba(115, 127, 143, 0.6);
+}
+
+/* ================= BUTTONS ================= */
+
+.primary-btn,
+.dashboard-btn,
+.transaction-btn,
+.auth-btn,
+.register-btn-save {
+  font-family: "Poppins", "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 13px 24px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--text-light);
+  box-shadow: 0 8px 24px rgba(27, 152, 224, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.primary-btn:hover,
+.dashboard-btn:hover,
+.transaction-btn:hover,
+.auth-btn:hover,
+.register-btn-save:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(27, 152, 224, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.primary-btn:active,
+.dashboard-btn:active,
+.transaction-btn:active {
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-dark);
+  font-family: "Poppins", "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 13px 24px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(27, 152, 224, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 152, 224, 0.15);
+}
+
+/* ================= TABLE STYLING ================= */
+
+.custom-table,
+.product-table,
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 248, 253, 0.92) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow), inset 0 1px 1px rgba(27, 152, 224, 0.15);
+  border: 1px solid rgba(27, 152, 224, 0.1);
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.custom-table th,
+.product-table th,
+.transaction-table th {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--text-light);
+  padding: 16px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+.custom-table td,
+.product-table td,
+.transaction-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(27, 152, 224, 0.1);
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.custom-table tbody tr:last-child td,
+.product-table tbody tr:last-child td,
+.transaction-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.custom-table tr:hover,
+.product-table tr:hover,
+.transaction-table tr:hover {
+  background: rgba(27, 152, 224, 0.05);
+  transition: 0.2s;
+}
+
+/* ACTION BUTTONS */
+.update-btn,
+.delete-btn,
+.purchase-btn,
+.return-btn,
+.issue-btn {
+  padding: 8px 14px;
+  border: none;
+  color: var(--text-light);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: "Poppins", "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-left: 5px;
+}
+
+.update-btn,
+.purchase-btn,
+.return-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.2);
+}
+
+.update-btn:hover,
+.purchase-btn:hover,
+.return-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.delete-btn,
+.issue-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.2);
+}
+
+.delete-btn:hover,
+.issue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+/* ================= PRODUCT LIST PAGE ================= */
+
+.product-list-container {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(180deg, 
+    #050d2c 0%, #0d47a1 8%, #1565c0 16%, #1976d2 28%, #1e88e5 42%,
+    #42a5f5 62%, #64b5f6 80%, #e1f5fe 100%);
+  background-attachment: fixed;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.product-list-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.table-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= SEARCH & PAGINATION ================= */
+
+.search-bar {
+  padding: 12px 16px;
+  max-width: 400px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 248, 253, 0.92) 100%);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-dark);
+  border-radius: 10px;
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgba(27, 152, 224, 0.08);
+  margin-bottom: 20px;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(27, 152, 224, 0.15), 0 8px 24px rgba(27, 152, 224, 0.15);
+  transform: translateY(-2px);
+}
+
+.search-bar::placeholder {
+  color: rgba(115, 127, 143, 0.6);
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: "Poppins", "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.pagination button:hover {
+  background: rgba(27, 152, 224, 0.1);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.pagination button.active {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 16px rgba(27, 152, 224, 0.25);
+}
+
+/* ================= TRANSACTION PAGE ================= */
+
+.transaction-card input,
+.transaction-card select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: 14px;
+  box-shadow: inset 0 1px 2px rgba(27, 152, 224, 0.05), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.transaction-card input:focus,
+.transaction-card select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(27, 152, 224, 0.12), 0 8px 24px rgba(27, 152, 224, 0.15);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* ================= UTILITIES ================= */
+
+.text-center {
+  text-align: center;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+  font-weight: 500;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.success-msg {
+  text-align: center;
+  margin-top: 15px;
+  color: #10b981;
+  font-weight: 600;
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .admin-navbar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .admin-navbar .nav-link,
+  .admin-navbar .nav-link.dropdown-toggle {
+    font-size: 12px;
+    padding: 10px 14px !important;
+  }
+
+  .admin-header h2,
+  .admin-title {
+    font-size: 24px;
+  }
+
+  .sku-card,
+  .product-card,
+  .report-card {
+    padding: 32px 24px;
+  }
+
+  .product-list-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-navbar {
+    width: 180px;
+    min-width: 180px;
+    padding: 16px 8px !important;
+  }
+
+  .admin-header {
+    padding: 20px 16px;
+  }
+
+  .admin-header h2,
+  .admin-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .sku-card,
+  .product-card,
+  .report-card {
+    padding: 24px 16px;
+  }
+
+  .form-control {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .primary-btn,
+  .dashboard-btn,
+  .transaction-btn {
+    padding: 11px 20px;
+    font-size: 12px;
+  }
+}

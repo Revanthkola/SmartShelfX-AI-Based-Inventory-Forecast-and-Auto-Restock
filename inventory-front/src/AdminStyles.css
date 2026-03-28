@@ -1,0 +1,645 @@
+/* ================= ADMIN DARK PROFESSIONAL THEME ================= */
+
+:root {
+  --admin-primary: #3b82f6;
+  --admin-primary-hover: #2563eb;
+  --admin-bg: #0f172a;
+  --admin-bg-secondary: #1e293b;
+  --admin-border: #334155;
+  --admin-text: #f1f5f9;
+  --admin-text-muted: #94a3b8;
+  --admin-success: #10b981;
+  --admin-warning: #f59e0b;
+  --admin-error: #ef4444;
+}
+
+/* ================= ADMIN BACKGROUND ================= */
+.admin-background {
+  min-height: 100vh !important;
+  background: linear-gradient(180deg, var(--admin-bg) 0%, var(--admin-bg-secondary) 50%, var(--admin-bg) 100%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  font-family: "Poppins", "Inter", -apple-system, system-ui, sans-serif !important;
+  position: static !important;
+}
+
+.admin-background::before {
+  display: none !important;
+}
+
+.admin-background > * {
+  position: static !important;
+  z-index: auto !important;
+}
+
+/* ================= ADMIN HEADER ================= */
+.admin-header {
+  background: var(--admin-bg-secondary) !important;
+  padding: 24px 32px !important;
+  border-bottom: 1px solid var(--admin-border) !important;
+  text-align: center !important;
+}
+
+.admin-header h2,
+.admin-header p {
+  margin: 0 !important;
+  font-size: 28px !important;
+  color: var(--admin-text) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+}
+
+.admin-header h4 {
+  margin-top: 8px !important;
+  font-size: 14px !important;
+  color: var(--admin-text-muted) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* ================= ADMIN NAVBAR ================= */
+.admin-navbar {
+  background: #111827 !important;
+  padding: 0 32px !important;
+  border-bottom: 1px solid #1f2937 !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 56px !important;
+}
+
+.admin-navbar .navbar-collapse {
+  display: flex !important;
+}
+
+.admin-navbar .navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  gap: 0 !important;
+}
+
+.admin-navbar .nav-item {
+  margin: 0 !important;
+}
+
+.admin-navbar .nav-link,
+.admin-navbar .nav-link.dropdown-toggle {
+  color: #9ca3af !important;
+  font-weight: 600 !important;
+  padding: 12px 16px !important;
+  margin: 0 !important;
+  transition: all 0.25s ease !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+}
+
+.admin-navbar .nav-link:hover,
+.admin-navbar .nav-link.dropdown-toggle:hover {
+  color: var(--admin-primary) !important;
+  border-bottom-color: var(--admin-primary) !important;
+}
+
+/* DROPDOWN */
+.admin-navbar .dropdown-menu {
+  background: var(--admin-bg-secondary) !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 6px !important;
+  padding: 8px 0 !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.admin-navbar .dropdown-item {
+  color: #e2e8f0 !important;
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+  transition: all 0.2s ease !important;
+}
+
+.admin-navbar .dropdown-item:hover {
+  background: var(--admin-border) !important;
+  color: var(--admin-primary) !important;
+  padding-left: 20px !important;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  color: var(--admin-error) !important;
+  font-weight: 600 !important;
+  background: none !important;
+  border: none !important;
+  padding: 10px 16px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  font-size: 13px !important;
+}
+
+.logout-btn:hover {
+  color: #dc2626 !important;
+}
+
+/* ================= ADMIN CONTENT WRAPPER ================= */
+.admin-dashboard-wrapper,
+.admin-content {
+  flex: 1 !important;
+  padding: 32px !important;
+  overflow-y: auto !important;
+}
+
+/* ================= DASHBOARD CARD ================= */
+.admin-dashboard-card {
+  background: var(--admin-bg-secondary) !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 8px !important;
+  padding: 32px !important;
+  margin-bottom: 24px !important;
+  max-width: none !important;
+  margin: 0 0 24px 0 !important;
+  display: block !important;
+  gap: auto !important;
+}
+
+.admin-left {
+  margin-bottom: 20px !important;
+}
+
+.admin-left h3 {
+  font-size: 24px !important;
+  color: var(--admin-text) !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.3px !important;
+}
+
+.admin-description {
+  color: var(--admin-text-muted) !important;
+  line-height: 1.6 !important;
+  font-size: 14px !important;
+}
+
+.admin-right {
+  display: none !important;
+}
+
+.admin-right img {
+  display: none !important;
+  width: auto !important;
+  border-radius: 0 !important;
+}
+
+/* ================= DASHBOARD ACTIONS ================= */
+.dashboard-actions {
+  margin-top: 20px !important;
+}
+
+.dashboard-btn {
+  background: var(--admin-primary) !important;
+  border: none !important;
+  padding: 11px 22px !important;
+  border-radius: 6px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  margin-right: 12px !important;
+  transition: all 0.25s ease !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+}
+
+.dashboard-btn:hover {
+  background: var(--admin-primary-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25) !important;
+}
+
+.dashboard-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* ================= FORM PAGES - DARK PROFESSIONAL ================= */
+.sku-background,
+.product-background,
+.report-background {
+  min-height: 100vh !important;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 40px 20px !important;
+  background-attachment: fixed !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+}
+
+.sku-card,
+.product-card,
+.report-card {
+  background: var(--admin-bg-secondary) !important;
+  backdrop-filter: none !important;
+  padding: 48px 42px !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  max-width: 500px !important;
+  border: 1px solid var(--admin-border) !important;
+  color: var(--admin-text) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.sku-card:hover,
+.product-card:hover,
+.report-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* ================= FORM INPUTS ================= */
+.sku-card .form-control,
+.product-card .form-control,
+.report-card .form-control,
+.sku-card input,
+.product-card input,
+.report-card input,
+.form-control {
+  width: 100% !important;
+  padding: 14px 16px !important;
+  border-radius: 6px !important;
+  border: 1px solid var(--admin-border) !important;
+  background: #0f172a !important;
+  color: var(--admin-text) !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  font-size: 14px !important;
+  transition: all 0.25s ease !important;
+  margin-bottom: 16px !important;
+}
+
+.form-control:hover {
+  border-color: var(--admin-primary) !important;
+  background: #1a2235 !important;
+}
+
+.form-control:focus {
+  outline: none !important;
+  border-color: var(--admin-primary) !important;
+  background: #1a2235 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.form-control::placeholder {
+  color: #64748b !important;
+}
+
+/* ================= BUTTONS - CLEAN COLORS ================= */
+.primary-btn,
+.dashboard-btn,
+.transaction-btn,
+.auth-btn,
+.register-btn-save {
+  font-family: "Poppins", "Inter", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+  transition: all 0.25s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  padding: 13px 24px !important;
+  border: none !important;
+  cursor: pointer !important;
+  background: var(--admin-primary) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2) !important;
+}
+
+.primary-btn:hover,
+.dashboard-btn:hover,
+.transaction-btn:hover,
+.auth-btn:hover,
+.register-btn-save:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3) !important;
+  background: var(--admin-primary-hover) !important;
+}
+
+.secondary-btn {
+  background: transparent !important;
+  border: 1px solid var(--admin-border) !important;
+  color: var(--admin-text) !important;
+  padding: 13px 24px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+}
+
+.secondary-btn:hover {
+  border-color: var(--admin-primary) !important;
+  color: var(--admin-primary) !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ================= TABLES - FULL WIDTH ================= */
+.custom-table,
+.product-table,
+.transaction-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: var(--admin-bg-secondary) !important;
+  backdrop-filter: none !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid var(--admin-border) !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+}
+
+.custom-table th,
+.product-table th,
+.transaction-table th {
+  background: var(--admin-primary) !important;
+  color: white !important;
+  padding: 16px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  text-align: left !important;
+}
+
+.custom-table td,
+.product-table td,
+.transaction-table td {
+  padding: 14px 16px !important;
+  border-bottom: 1px solid var(--admin-border) !important;
+  color: var(--admin-text) !important;
+  font-size: 14px !important;
+}
+
+.custom-table tbody tr:last-child td,
+.product-table tbody tr:last-child td,
+.transaction-table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.custom-table tr:hover,
+.product-table tr:hover,
+.transaction-table tr:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.update-btn,
+.delete-btn,
+.purchase-btn,
+.return-btn,
+.issue-btn {
+  padding: 8px 14px !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2px !important;
+  margin-left: 5px !important;
+}
+
+.update-btn,
+.purchase-btn,
+.return-btn {
+  background: var(--admin-success) !important;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2) !important;
+}
+
+.update-btn:hover,
+.purchase-btn:hover,
+.return-btn:hover {
+  background: #059669 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3) !important;
+}
+
+.delete-btn,
+.issue-btn {
+  background: var(--admin-error) !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2) !important;
+}
+
+.delete-btn:hover,
+.issue-btn:hover {
+  background: #dc2626 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* ================= PRODUCT LIST PAGE ================= */
+.product-list-container {
+  min-height: 100vh !important;
+  padding: 40px !important;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+  background-attachment: fixed !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+}
+
+.product-list-title {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  margin-bottom: 40px !important;
+  text-align: center !important;
+  color: var(--admin-primary) !important;
+  letter-spacing: -0.5px !important;
+}
+
+.table-wrapper {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+}
+
+/* ================= SEARCH BAR ================= */
+.search-bar {
+  padding: 12px 16px !important;
+  max-width: 400px !important;
+  background: var(--admin-bg-secondary) !important;
+  border: 1px solid var(--admin-border) !important;
+  color: var(--admin-text) !important;
+  border-radius: 6px !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  font-size: 14px !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 20px !important;
+}
+
+.search-bar:focus {
+  outline: none !important;
+  border-color: var(--admin-primary) !important;
+  background: #1a2235 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.search-bar::placeholder {
+  color: var(--admin-text-muted) !important;
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+  margin-top: 30px !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+
+.pagination button {
+  padding: 10px 14px !important;
+  background: var(--admin-bg-secondary) !important;
+  color: var(--admin-primary) !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  transition: all 0.25s ease !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2px !important;
+}
+
+.pagination button:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: var(--admin-primary) !important;
+  transform: translateY(-2px) !important;
+}
+
+.pagination button.active {
+  background: var(--admin-primary) !important;
+  color: white !important;
+  border-color: var(--admin-primary) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.pagination button:disabled {
+  background: transparent !important;
+  color: var(--admin-text-muted) !important;
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+}
+
+/* ================= TRANSACTION PAGE ================= */
+.transaction-card input,
+.transaction-card select {
+  width: 100% !important;
+  padding: 14px 16px !important;
+  margin-bottom: 16px !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 6px !important;
+  background: #0f172a !important;
+  color: var(--admin-text) !important;
+  transition: all 0.25s ease !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  font-size: 14px !important;
+}
+
+.transaction-card input:focus,
+.transaction-card select:focus {
+  outline: none !important;
+  border-color: var(--admin-primary) !important;
+  background: #1a2235 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* ================= UTILITIES ================= */
+.text-center {
+  text-align: center !important;
+}
+
+.error {
+  color: var(--admin-error) !important;
+  font-size: 12px !important;
+  margin-top: 6px !important;
+  display: block !important;
+  font-weight: 500 !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+}
+
+.success-msg {
+  text-align: center !important;
+  margin-top: 15px !important;
+  color: var(--admin-success) !important;
+  font-weight: 600 !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .admin-header h2,
+  .admin-header p {
+    font-size: 24px !important;
+  }
+
+  .admin-navbar .nav-link {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+  }
+
+  .sku-card,
+  .product-card,
+  .report-card {
+    padding: 32px 24px !important;
+  }
+
+  .product-list-title {
+    font-size: 24px !important;
+  }
+
+  .custom-table th,
+  .product-table th {
+    font-size: 12px !important;
+    padding: 12px !important;
+  }
+
+  .custom-table td,
+  .product-table td {
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-navbar {
+    padding: 0 16px !important;
+  }
+
+  .admin-dashboard-wrapper {
+    padding: 20px !important;
+  }
+
+  .sku-card,
+  .product-card,
+  .report-card {
+    padding: 24px 16px !important;
+    max-width: 100% !important;
+  }
+
+  .custom-table th {
+    font-size: 11px !important;
+    padding: 10px 8px !important;
+  }
+
+  .custom-table td {
+    padding: 8px 6px !important;
+    font-size: 12px !important;
+  }
+
+  .dashboard-btn {
+    padding: 9px 18px !important;
+    font-size: 12px !important;
+  }
+}
